@@ -1,0 +1,14 @@
+[ignore]
+.*\.json
+.*/src/.*
+.*/test/.*
+
+[include]
+
+[libs]
+
+[lints]
+
+[options]
+
+[strict]

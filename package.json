@@ -4,11 +4,38 @@
   "description": "js13kgames contribution in 2018",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "parcel build src/index.html",
+    "coverage": "nyc report",
+    "doc": "jsdoc -d ./docs -p ./package.json -R README.md src",
+    "flow:check": "flow check",
+    "flow:jsdoc": "flow-jsdoc -d ./src -o ./annotated -c",
+    "lint": "npm run lint:css && npm run lint:js",
+    "lint:css": "csscomb src/*.css",
+    "lint:js": "standard src/*.js",
+    "start": "parcel -p 8080 src/index.html",
+    "test": "nyc mocha",
+    "typing": "npm run flow:jsdoc && npm run flow:check"
   },
   "keywords": [
     "js13kgames"
   ],
   "author": "",
-  "license": "GPLv3"
+  "license": "GPL-3.0+",
+  "devDependencies": {
+    "chai": "4.1.2",
+    "csscomb": "4.2.0",
+    "flow-bin": "0.79.1",
+    "flow-jsdoc": "0.3.1",
+    "jsdoc": "3.5.5",
+    "mocha": "5.2.0",
+    "nyc": "13.0.1",
+    "parcel-bundler": "1.9.7",
+    "parcel-plugin-zip": "1.0.6",
+    "sinon": "6.1.5",
+    "sinon-chai": "3.2.0",
+    "standard": "12.0.1"
+  },
+  "dependencies": {
+    "mastermind-game": "1.1.2"
+  }
 }
