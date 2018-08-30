@@ -1,0 +1,14 @@
+{
+  "name": "js13kgames-2018",
+  "version": "0.1.0",
+  "description": "js13kgames contribution in 2018",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "js13kgames"
+  ],
+  "author": "",
+  "license": "GPLv3"
+}
