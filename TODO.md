@@ -7,13 +7,15 @@ This is a list of open things to implement.
 - Write some prose (see below)
 - Display checkboxes on the UI for guessing
 - Level design
-- Highscores?
+- Highscores in the shape of minutes counting down
+- Sound of dial-in with 56k modem
 
 ## Gameplay
 
 The Internet broke down, so you are offline.
-Somehow you learn about getting back online by playing several rounds of mini
-games.
+But you remember that there was a way to connect to an alternative dial by
+several smaller computers, so you have to overcome their firewall by playing
+some mini games.
 For example, solving a mastermind.
 Or some puzzle game (pipes with water or what not)
 Or maze games

@@ -1,8 +1,9 @@
-# js13kgames-2018
+# An Offline Life (js13kgames-2018 contribution)
 
 This is my contribution to js13kgames in 2018.
+It is inspired by the „Free Hours” comic of commitstrip.
 
-## Acknowledgements
+## Credits
 
 This projects would not have been possible without the contributions by others.
 It makes use of the following works:
