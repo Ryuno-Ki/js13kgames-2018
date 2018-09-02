@@ -47,6 +47,8 @@ export default {
     copy({
       './node_modules/kontra/src/core.js': './dist/vendor/kontra.core.js',
       './node_modules/kontra/src/assets.js': './dist/vendor/kontra.assets.js',
+      './node_modules/kontra/src/gameLoop.js': './dist/vendor/kontra.gameLoop.js',
+      './node_modules/kontra/src/sprite.js': './dist/vendor/kontra.sprite.js',
       './src/sprites/assets/Switch.png': './dist/assets/Switch.png'
     }),
 
@@ -61,7 +63,9 @@ export default {
       title: 'An Offline Life',
       moreScripts: [
         './vendor/kontra.core.js',
-        './vendor/kontra.assets.js'
+        './vendor/kontra.assets.js',
+        './vendor/kontra.gameLoop.js',
+        './vendor/kontra.sprite.js',
       ]
     })
   ]
