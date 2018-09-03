@@ -2,6 +2,7 @@
 import { appendCanvas } from './init'
 import { render } from './render'
 import { update } from './update'
+import { store } from './store'
 
 const gameLoopOptions = {
   render,
@@ -9,16 +10,7 @@ const gameLoopOptions = {
 }
 
 appendCanvas()
-console.log('Initialising kontra', kontra)
+console.log('Initialising', kontra)
 kontra.init()
 const loop = kontra.gameLoop(gameLoopOptions)
 window.loop = loop
-
-/*
-import { GameForMachines } from 'mastermind-game'
-class LedStrategy extends GameForMachines {
-  guess (history) {
-    // write your strategy's logic here!
-  }
-}
-*/

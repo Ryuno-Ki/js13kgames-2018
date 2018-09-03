@@ -39,7 +39,9 @@
     "rollup-plugin-filesize": "4.0.1",
     "rollup-plugin-license": "0.7.0",
     "rollup-plugin-node-resolve": "3.3.0",
+    "rollup-plugin-replace": "2.0.0",
     "rollup-plugin-static-site": "0.0.3",
+    "rollup-plugin-terser": "2.0.2",
     "sinon": "6.1.5",
     "sinon-chai": "3.2.0",
     "standard": "12.0.1",
@@ -47,6 +49,7 @@
   },
   "dependencies": {
     "kontra": "4.0.1",
-    "mastermind-game": "1.1.2"
+    "mastermind-game": "1.1.2",
+    "redux": "4.0.0"
   }
 }

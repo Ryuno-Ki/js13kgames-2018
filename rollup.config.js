@@ -3,7 +3,9 @@ import copy from 'rollup-plugin-copy'
 import filesize from 'rollup-plugin-filesize'
 import license from 'rollup-plugin-license'
 import nodeResolve from 'rollup-plugin-node-resolve'
+import replace from 'rollup-plugin-replace'
 import staticSite from 'rollup-plugin-static-site'
+import { terser } from 'rollup-plugin-terser'
 
 const LICENSE_HEADER = `
 This file is part of An Offline Life.
@@ -41,8 +43,14 @@ export default {
  
     commonjs({
       include: './node_modules/**',
-      sourceMap: false,
+      sourceMap: true,
     }),
+
+    replace({
+      'process.env.NODE_ENV': JSON.stringify('production')
+    }),
+
+    terser(),
 
     copy({
       './node_modules/kontra/src/core.js': './dist/vendor/kontra.core.js',
