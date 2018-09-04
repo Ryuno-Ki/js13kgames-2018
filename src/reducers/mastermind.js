@@ -1,5 +1,5 @@
 import { Game } from 'mastermind-game'
-import { GUESS } from '../actions/mastermind'
+import { GUESS } from '../actions/types'
 import { initialState } from '../state/mastermind'
 
 function generateSecret () {
@@ -13,8 +13,8 @@ function guess (state, guessedValue) {
   return game.evaluateGuess(guessedValue)
 }
 
-function mastermindReducer (state, action) {
-  if (!state) {
+function mastermind (state, action) {
+  if (typeof state === 'undefined') {
     return {
       ...initialState,
       secret: generateSecret()
@@ -37,5 +37,5 @@ function mastermindReducer (state, action) {
 }
 
 export {
-  mastermindReducer
+  mastermind
 }

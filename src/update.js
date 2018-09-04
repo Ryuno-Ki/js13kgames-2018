@@ -1,12 +1,7 @@
-import { createSwitchesSprite } from './sprites/switches'
-
-const switchesSprite = createSwitchesSprite()
+import { store } from './store'
 
 const update = function (dt) {
-  console.log('Time diff', dt)
-  switchesSprite.then((sprite) => {
-    sprite.update()
-  })
+  store.dispatch({ type: 'TICK' })
 }
 
 export {

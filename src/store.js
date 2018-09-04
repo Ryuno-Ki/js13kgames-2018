@@ -1,12 +1,10 @@
 import { createStore } from 'redux'
-import { mastermindReducer } from './reducers/mastermind'
+import { reducer } from './reducers'
 
-const store = createStore(mastermindReducer)
-store.subscribe(() => {
-  console.log('Received state update:', store.getState())
-})
-store.dispatch({ type: 'INITIAL' })
-window.store = store
+const store = createStore(
+  reducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+)
 
 export {
   store

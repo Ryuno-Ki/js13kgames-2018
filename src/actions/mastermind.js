@@ -1,4 +1,4 @@
-const GUESS = 'GUESS'
+import { GUESS } from './types'
 
 function makeGuess (guess) {
   return {
@@ -8,6 +8,5 @@ function makeGuess (guess) {
 }
 
 export {
-  GUESS,
   makeGuess
 }
