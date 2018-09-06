@@ -1,5 +1,6 @@
 /* global kontra */
 const assets = [
+  'computer.sprite.png',
   'Switch.png'
 ]
 
@@ -9,6 +10,4 @@ function loadAssets () {
   return loadedAssets
 }
 
-export {
-  loadAssets
-}
+export default loadAssets

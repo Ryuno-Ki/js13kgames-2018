@@ -1,9 +1,11 @@
-import { store } from './store'
+import store from './store'
 
 const update = function (dt) {
-  store.dispatch({ type: 'TICK' })
+  const loaded = store.state().loaded
+  console.log('Toggling loaded', loaded)
+  store.setState({
+    loaded: !loaded
+  })
 }
 
-export {
-  update
-}
+export default update

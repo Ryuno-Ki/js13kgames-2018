@@ -1,31 +1,19 @@
-/* global kontra */
-function renderSprite (self, active) {
+function renderSprite (self) {
   const NUMBER_OF_IMAGES_ON_SPRITE = 3
-  const LEFT = 0
-  const MIDDLE = 1
-  const RIGHT = 2
+  const ACTIVE_PC = 2
   const { context, image, height, width, x, y } = self
 
   // Subimage values
-  const sy = y
   const sWidth = width / NUMBER_OF_IMAGES_ON_SPRITE
   const sHeight = height
+  const sx = ACTIVE_PC * sWidth
+  const sy = y
 
   // Destination values
-  const dx = x
-  const dy = y
   const dWidth = sWidth
   const dHeight = sHeight
-
-  let sx
-  // Determine, which sprite on spritesheet to display
-  if (active === true) {
-    sx = LEFT * sWidth
-  } else if (active === false) {
-    sx = RIGHT * sWidth
-  } else {
-    sx = MIDDLE * sWidth
-  }
+  const dx = x
+  const dy = y
 
   setTimeout(() => {
     // Draw whole spritesheet for debugging
@@ -34,17 +22,17 @@ function renderSprite (self, active) {
   }, 0)
 }
 
-function createSwitchesSprite (x, y, active) {
+function createComputerSprite (x, y) {
   const spriteOptions = {
     x: x || 0,
     y: y || 0,
-    image: kontra.assets.images.Switch,
-    type: 'Switch'
+    image: kontra.assets.images['computer.sprite'],
+    type: 'computer'
   }
 
-  spriteOptions.render = function () { renderSprite(this, active) }
+  spriteOptions.render = function () { renderSprite(this) }
   const sprite = kontra.sprite(spriteOptions)
   return sprite
 }
 
-export default createSwitchesSprite
+export default createComputerSprite

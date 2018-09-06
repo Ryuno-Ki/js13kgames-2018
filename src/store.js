@@ -1,11 +1,10 @@
-import { createStore } from 'redux'
-import { reducer } from './reducers'
+import nation from 'nation'
+import state from './state'
 
-const store = createStore(
-  reducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-)
+const store = nation({
+  initial: () => {
+    return state
+  }
+})
 
-export {
-  store
-}
+export default store

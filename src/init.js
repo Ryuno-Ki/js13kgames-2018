@@ -5,6 +5,4 @@ const appendCanvas = function () {
   document.body.insertBefore(canvas, firstChild)
 }
 
-export {
-  appendCanvas,
-}
+export default appendCanvas

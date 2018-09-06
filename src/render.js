@@ -1,18 +1,24 @@
-import { createSwitchesSprite } from './sprites/switches'
-import { store } from './store'
+import createComputerSprite from './sprites/computers'
+import createSwitchesSprite from './sprites/switches'
+import store from './store'
 
 const render = function () {
-  const unsubscribe = store.subscribe(() => {
-    const state = store.getState()
+  store.onChange((state) => {
     const { ui } = state
-    const { switch1_x, switch1_y, switch1_active } = ui
+    const { computers, switches } = ui
 
-    const sprite = createSwitchesSprite(switch1_x, switch1_y, switch1_active)
-    sprite.render()
-    unsubscribe()
+    computers.map((computerState) => {
+      const { x, y } = computerState
+      const sprite = createComputerSprite(x, y)
+      return sprite
+    }).forEach((sprite) => sprite.render())
+
+    switches.map((switchState) => {
+      const { x, y, active } = switchState
+      const sprite = createSwitchesSprite(x, y, active)
+      return sprite
+    }).forEach((sprite) => sprite.render())
   })
 }
 
-export {
-  render
-}
+export default render

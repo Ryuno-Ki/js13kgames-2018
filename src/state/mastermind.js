@@ -1,6 +1,6 @@
 import { Game } from 'mastermind-game'
 
-const initialState = {
+const mastermind = {
   correctPosition: null,
   correctNumber: null,
   numberOfGuesses: Game.NUM_GUESSES,
@@ -9,6 +9,4 @@ const initialState = {
   upperInteger: 2  // because binary
 }
 
-export {
-  initialState
-}
+export default mastermind

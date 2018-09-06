@@ -31,10 +31,6 @@ export default {
     file: 'index.js',
     format: 'iife'
   },
-  external: [
-    'kontra/src/core',
-    'kontra/src/assets'
-  ],
   plugins: [
     nodeResolve({
       jsnext: true,
@@ -53,10 +49,8 @@ export default {
     terser(),
 
     copy({
-      './node_modules/kontra/src/core.js': './dist/vendor/kontra.core.js',
-      './node_modules/kontra/src/assets.js': './dist/vendor/kontra.assets.js',
-      './node_modules/kontra/src/gameLoop.js': './dist/vendor/kontra.gameLoop.js',
-      './node_modules/kontra/src/sprite.js': './dist/vendor/kontra.sprite.js',
+      './src/vendor/kontra.js': './dist/vendor/kontra.js',
+      './src/sprites/assets/computer.sprite.png': './dist/assets/computer.sprite.png',
       './src/sprites/assets/Switch.png': './dist/assets/Switch.png'
     }),
 
@@ -70,10 +64,7 @@ export default {
       dir: './dist',
       title: 'An Offline Life',
       moreScripts: [
-        './vendor/kontra.core.js',
-        './vendor/kontra.assets.js',
-        './vendor/kontra.gameLoop.js',
-        './vendor/kontra.sprite.js',
+        './vendor/kontra.js'
       ]
     })
   ]
