@@ -15,7 +15,9 @@ loadAssets().then(() => {
   kontra.init()
   const loop = kontra.gameLoop(gameLoopOptions)
   loop.start()
+
   store.setState({ loaded: true })
+  // For debugging
   setTimeout(() => { loop.stop() }, 300)
 }).catch((error) => {
   console.error('Could not initialise, because', error)
