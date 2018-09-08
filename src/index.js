@@ -1,16 +1,15 @@
 /* global kontra */
-import appendCanvas from './init'
 import render from './render'
 import update from './update'
 import loadAssets from './sprites'
 import store from './store'
+import tilesets from './tilesets'
 
 const gameLoopOptions = {
   render,
   update
 }
 
-appendCanvas()
 loadAssets().then(() => {
   console.log('Initialising', kontra)
   kontra.init()

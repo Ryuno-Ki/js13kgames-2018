@@ -1,11 +1,10 @@
 /* global kontra */
 const assets = [
-  'computer.sprite.png',
-  'Switch.png'
+  'tileset.png'
 ]
 
 function loadAssets () {
-  kontra.assets.imagePath = './assets'
+  kontra.assets.imagePath = './'
   const loadedAssets = kontra.assets.load(...assets)
   return loadedAssets
 }

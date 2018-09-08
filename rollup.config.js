@@ -1,10 +1,8 @@
 import commonjs from 'rollup-plugin-commonjs'
 import copy from 'rollup-plugin-copy'
-import filesize from 'rollup-plugin-filesize'
 import license from 'rollup-plugin-license'
 import nodeResolve from 'rollup-plugin-node-resolve'
 import replace from 'rollup-plugin-replace'
-import staticSite from 'rollup-plugin-static-site'
 import { terser } from 'rollup-plugin-terser'
 
 const LICENSE_HEADER = `
@@ -27,8 +25,8 @@ along with An Offline Life.  If not, see <https://www.gnu.org/licenses/>.
 export default {
   input: './src/index.js',
   output: {
-    dir: './dist',
-    file: 'index.js',
+    dir: './tmp',
+    file: 'game.js',
     format: 'iife'
   },
   plugins: [
@@ -49,23 +47,13 @@ export default {
     terser(),
 
     copy({
-      './src/vendor/kontra.js': './dist/vendor/kontra.js',
-      './src/sprites/assets/computer.sprite.png': './dist/assets/computer.sprite.png',
-      './src/sprites/assets/Switch.png': './dist/assets/Switch.png'
+      './src/game.css': './tmp/game.css',
+      './src/vendor/kontra.js': './tmp/kontra.js',
+      './src/assets/tileset.png': './dist/tileset.png'
     }),
 
     license({
       banner: LICENSE_HEADER
     }),
-
-    filesize(),
-
-    staticSite({
-      dir: './dist',
-      title: 'An Offline Life',
-      moreScripts: [
-        './vendor/kontra.js'
-      ]
-    })
   ]
 }
