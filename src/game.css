@@ -10,4 +10,5 @@ body {
 
 #game {
     background-color: #eee;
+    cursor: pointer;
 }

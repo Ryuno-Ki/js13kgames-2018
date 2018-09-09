@@ -49,6 +49,7 @@ export default {
     copy({
       './src/game.css': './tmp/game.css',
       './src/vendor/kontra.js': './tmp/kontra.js',
+      './src/assets/dial-up-sound.mp3': './dist/dial-up-sound.mp3',
       './src/assets/tileset.png': './dist/tileset.png'
     }),
 

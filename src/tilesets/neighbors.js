@@ -1,100 +1,101 @@
-const neighborsByType = {
-  [1]: {
-    t: [ 3, 4, 5,    7,    9, 10, 11,     16 ],
-    r: [ 3, 4,       7, 8, 9,     11, 12, 16 ],
-    b: [          6, 7,       10, 11, 12     ],
-    l: [ 3, 4, 5,    7, 8, 9                 ]
-  },
-  [2]: {
-    t: [ 3, 4, 5,    7,    9, 10, 11,     16 ],
-    r: [ 3, 4,       7, 8,    10,     12, 16 ],
-    b: [          6, 7,       10, 11, 12     ],
-    l: [ 3, 4, 5,    7, 8, 9                 ]
-  },
-  [3]: {
-    t: [ 3, 4, 5,    7,    9, 10,         16 ],
-    r: [ ],
-    b: [ ],
-    l: [ ]
-  },
-  [4]: {
-    t: [ ],
-    r: [ ],
-    b: [ ],
-    l: [ ]
-  },
-  [5]: {
-    t: [ ],
-    r: [ ],
-    b: [ ],
-    l: [ ]
-  },
-  [6]: {
-    t: [ ],
-    r: [ ],
-    b: [ ],
-    l: [ ]
-  },
-  [7]: {
-    t: [ ],
-    r: [ ],
-    b: [ ],
-    l: [ ]
-  },
-  [8]: {
-    t: [ ],
-    r: [ ],
-    b: [ ],
-    l: [ ]
-  },
-  [9]: {
-    t: [ ],
-    r: [ ],
-    b: [ ],
-    l: [ ]
-  },
-  [10]: {
-    t: [ ],
-    r: [ ],
-    b: [ ],
-    l: [ ]
-  },
-  [11]: {
-    t: [ ],
-    r: [ ],
-    b: [ ],
-    l: [ ]
-  },
-  [12]: {
-    t: [ ],
-    r: [ ],
-    b: [ ],
-    l: [ ]
-  },
-  [13]: {
-    t: [ ],
-    r: [ ],
-    b: [ ],
-    l: [ ]
-  },
-  [14]: {
-    t: [ ],
-    r: [ ],
-    b: [ ],
-    l: [ ]
-  },
-  [15]: {
-    t: [ ],
-    r: [ ],
-    b: [ ],
-    l: [ ]
-  },
-  [16]: {
-    t: [ ],
-    r: [ ],
-    b: [ ],
-    l: [ ]
-  }
-}
+// TODO: Think about using bitwise operations:
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators
+const neighborsByType = [{
+  id: 1,
+  toTop: false,
+  toRight: false,
+  toBottom: true,
+  toLeft: true
+}, {
+  id: 2,
+  toTop: true,
+  toRight: true,
+  toBottom: false,
+  toLeft: false
+}, {
+  id: 3,
+  toTop: true,
+  toRight: false,
+  toBottom: false,
+  toLeft: true
+}, {
+  id: 4,
+  toTop: false,
+  toRight: true,
+  toBottom: true,
+  toLeft: false
+}, {
+  id: 5,
+  toTop: false,
+  toRight: true,
+  toBottom: false,
+  toLeft: true
+}, {
+  id: 6,
+  toTop: true,
+  toRight: false,
+  toBottom: true,
+  toLeft: false
+}, {
+  id: 7,
+  toTop: false,
+  toRight: false,
+  toBottom: false,
+  toLeft: false
+}, {
+  id: 8,
+  toTop: true,
+  toRight: false,
+  toBottom: true,
+  toLeft: true
+}, {
+  id: 9,
+  toTop: false,
+  toRight: true,
+  toBottom: false,
+  toLeft: false
+}, {
+  id: 10,
+  toTop: false,
+  toRight: true,
+  toBottom: false,
+  toLeft: false
+}, {
+  id: 11,
+  toTop: false,
+  toRight: true,
+  toBottom: false,
+  toLeft: false
+}, {
+  id: 12,
+  toTop: true,
+  toRight: false,
+  toBottom: false,
+  toLeft: false
+}, {
+  id: 13,
+  toTop: false,
+  toRight: false,
+  toBottom: false,
+  toLeft: false
+}, {
+  id: 14,
+  toTop: false,
+  toRight: false,
+  toBottom: false,
+  toLeft: false
+}, {
+  id: 15,
+  toTop: false,
+  toRight: false,
+  toBottom: false,
+  toLeft: false
+}, {
+  id: 16,
+  toTop: false,
+  toRight: false,
+  toBottom: true,
+  toLeft: true
+}]
 
 export default neighborsByType

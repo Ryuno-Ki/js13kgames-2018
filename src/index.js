@@ -18,7 +18,7 @@ loadAssets().then(() => {
 
   store.setState({ loaded: true })
   // For debugging
-  setTimeout(() => { loop.stop() }, 300)
+  setTimeout(() => { loop.stop() }, 100)
 }).catch((error) => {
   console.error('Could not initialise, because', error)
 })
