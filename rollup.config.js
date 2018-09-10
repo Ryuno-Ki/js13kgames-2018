@@ -4,6 +4,7 @@ import license from 'rollup-plugin-license'
 import nodeResolve from 'rollup-plugin-node-resolve'
 import replace from 'rollup-plugin-replace'
 import { terser } from 'rollup-plugin-terser'
+import visualizer from 'rollup-plugin-visualizer'
 
 const LICENSE_HEADER = `
 This file is part of An Offline Life.
@@ -56,5 +57,7 @@ export default {
     license({
       banner: LICENSE_HEADER
     }),
+
+    visualizer()
   ]
 }
