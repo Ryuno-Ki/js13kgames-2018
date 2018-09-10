@@ -1,4 +1,6 @@
 import constants from '../../constants'
+import store from '../../store'
+import fill from './fill'
 import modem from './modem'
 import path from './path'
 import pc from './pc'
@@ -33,10 +35,24 @@ const generateMaze = function () {
   })
 
   path(generatedMaze)
+  fill(generatedMaze)
+
+  const state = store.state()
+  store.setState({
+    ...state,
+    game: {
+      ...state.game,
+      m: generatedMaze
+    }
+  })
   return generatedMaze
 }
 
 const maze = function () {
+  const mazeInState = store.state().game.m
+  if (mazeInState) {
+    return mazeInState
+  }
   const generatedMaze = generateMaze()
   return generatedMaze
 }

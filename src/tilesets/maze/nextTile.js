@@ -7,20 +7,24 @@ import xyToIndex from './xyToIndex'
 const getIndexByDirection = function (pos, direction) {
   let index
   switch (direction) {
-    case 'toTop':
+    case 't':
       index = xyToIndex(pos.x,     pos.y - 1)
       break
-    case 'toRight':
+    case 'r':
       index = xyToIndex(pos.x + 1, pos.y)
       break
-    case 'toBottom':
+    case 'b':
       index = xyToIndex(pos.x,     pos.y + 1) 
       break
-    case 'toLeft':
+    case 'l':
       index = xyToIndex(pos.x - 1, pos.y)
       break
   }
   return index
+}
+
+const findNeighbor = function (characteristics) {
+  return characteristics.id
 }
 
 const pickNextTile = function (possibleTiles, maze, index) {
@@ -32,12 +36,11 @@ const pickNextTile = function (possibleTiles, maze, index) {
   }
 
   if (numberOfTiles === 1) {
-    id = possibleTiles[ 0 ].id
+    id = findNeighbor(possibleTiles[ 0 ])
   } else {
     // TODO: Pick the closest tile towards end
     // const tile = randomPick(possibleTiles)
-    // id = tile.id
-    id = possibleTiles[ 0 ].id
+    id = findNeighbor(possibleTiles[ 0 ])
   }
 
   maze[ index ] = id
@@ -64,12 +67,12 @@ const nextTile = function (maze, current, next) {
   const isLeft  = colDistance === -1
 
   let toCurrentInDirection = ''
-  if (isAbove && next.toBottom) { toCurrentInDirection = 'toBottom' }
-  if (isRight && next.toLeft)   { toCurrentInDirection = 'toLeft' }
-  if (isBelow && next.toTop)    { toCurrentInDirection = 'toTop' }
-  if (isLeft  && next.toRight)  { toCurrentInDirection = 'toRight' }
+  if (isAbove && next.b) { toCurrentInDirection = 'b' }
+  if (isRight && next.l) { toCurrentInDirection = 'l' }
+  if (isBelow && next.t) { toCurrentInDirection = 't' }
+  if (isLeft  && next.r) { toCurrentInDirection = 'r' }
 
-  const allDirections = [ 'toTop', 'toRight', 'toBottom', 'toLeft' ]
+  const allDirections = [ 't', 'r', 'b', 'l' ]
   const otherDirections = allDirections
     .filter((direction) => direction !== toCurrentInDirection)
 

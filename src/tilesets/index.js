@@ -4,7 +4,7 @@ import store from '../store'
 import maze from './maze'
 
 const init = function (tileEngine) {
-  const level = store.state().level
+  const level = store.state().game.l
   const { g, t } = constants
 
   tileEngine.addTilesets({ image: t })

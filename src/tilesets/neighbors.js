@@ -1,101 +1,101 @@
 // TODO: Think about using bitwise operations:
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators
-const neighborsByType = [{
+const neighbors = [{
   id: 1,
-  toTop: false,
-  toRight: false,
-  toBottom: true,
-  toLeft: true
+  t: false,
+  r: false,
+  b: true,
+  l: true
 }, {
   id: 2,
-  toTop: true,
-  toRight: true,
-  toBottom: false,
-  toLeft: false
+  t: true,
+  r: true,
+  b: false,
+  l: false
 }, {
   id: 3,
-  toTop: true,
-  toRight: false,
-  toBottom: false,
-  toLeft: true
+  t: true,
+  r: false,
+  b: false,
+  l: true
 }, {
   id: 4,
-  toTop: false,
-  toRight: true,
-  toBottom: true,
-  toLeft: false
+  t: false,
+  r: true,
+  b: true,
+  l: false
 }, {
   id: 5,
-  toTop: false,
-  toRight: true,
-  toBottom: false,
-  toLeft: true
+  t: false,
+  r: true,
+  b: false,
+  l: true
 }, {
   id: 6,
-  toTop: true,
-  toRight: false,
-  toBottom: true,
-  toLeft: false
+  t: true,
+  r: false,
+  b: true,
+  l: false
 }, {
   id: 7,
-  toTop: false,
-  toRight: false,
-  toBottom: false,
-  toLeft: false
+  t: false,
+  r: false,
+  b: false,
+  l: false
 }, {
   id: 8,
-  toTop: true,
-  toRight: false,
-  toBottom: true,
-  toLeft: true
+  t: true,
+  r: false,
+  b: true,
+  l: true
 }, {
   id: 9,
-  toTop: false,
-  toRight: true,
-  toBottom: false,
-  toLeft: false
+  t: false,
+  r: true,
+  b: false,
+  l: false
 }, {
   id: 10,
-  toTop: false,
-  toRight: true,
-  toBottom: false,
-  toLeft: false
+  t: false,
+  r: true,
+  b: false,
+  l: false
 }, {
   id: 11,
-  toTop: false,
-  toRight: true,
-  toBottom: false,
-  toLeft: false
+  t: false,
+  r: true,
+  b: false,
+  l: false
 }, {
   id: 12,
-  toTop: true,
-  toRight: false,
-  toBottom: false,
-  toLeft: false
+  t: true,
+  r: false,
+  b: false,
+  l: false
 }, {
   id: 13,
-  toTop: false,
-  toRight: false,
-  toBottom: false,
-  toLeft: false
+  t: false,
+  r: false,
+  b: false,
+  l: false
 }, {
   id: 14,
-  toTop: false,
-  toRight: false,
-  toBottom: false,
-  toLeft: false
+  t: false,
+  r: false,
+  b: false,
+  l: false
 }, {
   id: 15,
-  toTop: false,
-  toRight: false,
-  toBottom: false,
-  toLeft: false
+  t: false,
+  r: false,
+  b: false,
+  l: false
 }, {
   id: 16,
-  toTop: false,
-  toRight: false,
-  toBottom: true,
-  toLeft: true
+  t: false,
+  r: false,
+  b: true,
+  l: true
 }]
 
-export default neighborsByType
+export default neighbors

@@ -2,7 +2,7 @@ import constants from '../../constants'
 import store from '../../store'
 
 const switches = function () {
-  const level = store.state().level
+  const level = store.state().game.l
   const { r, c, b1 } = constants
 
   const emptySwitches = new Array(level)

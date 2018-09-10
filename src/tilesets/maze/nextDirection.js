@@ -33,22 +33,22 @@ const nextDirection = function (maze, current) {
   const { x, y } = indexToXY(currentIndex)
 
   const connections = neighbors.find((neighbor) => neighbor.id === currentId)
-  const { toTop, toRight, toBottom, toLeft } = connections
+  const { t, r, b, l } = connections
 
   const allDirections = []
-  if (toTop)    { allDirections.push(xyToIndex(x,     y - 1)) }
-  if (toRight)  { allDirections.push(xyToIndex(x + 1, y    )) }
-  if (toBottom) { allDirections.push(xyToIndex(x,     y + 1)) }
-  if (toLeft)   { allDirections.push(xyToIndex(x - 1, y    )) }
+  if (t) { allDirections.push(xyToIndex(x,     y - 1)) }
+  if (r) { allDirections.push(xyToIndex(x + 1, y    )) }
+  if (b) { allDirections.push(xyToIndex(x,     y + 1)) }
+  if (l) { allDirections.push(xyToIndex(x - 1, y    )) }
 
   const possibleDirections = allDirections
     .filter((index) => isAllowedUnsetIndex(maze, index))
 
   return pickNextDirection(possibleDirections, {
-    toTop: toTop && toBottom ? true : !toTop,
-    toRight: toLeft && toRight ? true : !toRight,
-    toBottom: toTop && toBottom ? true : !toBottom,
-    toLeft: toLeft && toRight ? true : !toLeft
+    t: t && b ? true : !t,
+    r: l && r ? true : !r,
+    b: t && b ? true : !b,
+    l: l && r ? true : !l
   })
 }
 

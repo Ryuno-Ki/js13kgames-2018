@@ -2,7 +2,7 @@ import constants from '../../constants'
 import store from '../../store'
 
 const servers = function () {
-  const level = store.state().level
+  const level = store.state().game.l
   const { r, c, s3 } = constants
 
   const emptyServerTiles = new Array(level)
