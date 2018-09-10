@@ -1,14 +1,14 @@
 body {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    background-color: silver;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: silver;
 }
 
 #game {
-    background-color: #eee;
-    cursor: pointer;
+  background-color: #eeeeee;
+  cursor: pointer;
 }

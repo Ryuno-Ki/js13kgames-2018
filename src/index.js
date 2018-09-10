@@ -3,7 +3,6 @@ import render from './render'
 import update from './update'
 import loadAssets from './sprites'
 import store from './store'
-import tilesets from './tilesets'
 
 const gameLoopOptions = {
   render,
