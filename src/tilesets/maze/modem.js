@@ -1,13 +1,12 @@
-import sizes from '../sizes'
+import constants from '../../constants'
 
 const modem = function () {
-  const { rows, cols } = sizes
+  const { r, c, m } = constants
 
-  const modemValue = 16
   const modemTile = {
-    x: cols,
-    y: rows - 1,
-    value: modemValue
+    x: c,
+    y: r - 1,
+    value: m
   }
   return [ modemTile ]
 }

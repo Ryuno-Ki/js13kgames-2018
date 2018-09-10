@@ -1,11 +1,11 @@
-import sizes from '../sizes'
+import constants from '../../constants'
 
 const isAllowedUnsetIndex = function (maze, index) {
-  const { rows, cols } = sizes
+  const { r, c, u, s1, s2, s3 } = constants
   const lowerLimit = 0
-  const upperLimit = rows * cols
+  const upperLimit = r * c
 
-  const unsetTiles = [ 0, 9, 10, 11 ]
+  const unsetTiles = [ u, s1, s2, s3 ]
   const id = maze[ index ]
 
   const isWithinLimits = index >= lowerLimit && index < upperLimit

@@ -1,16 +1,16 @@
-import sizes from '../sizes'
+import constants from '../../constants'
+import store from '../../store'
 
 const switches = function () {
-  const level = 1  // TODO: Read from store
-  const { rows, cols } = sizes
-  const switchValue = 14
+  const level = store.state().level
+  const { r, c, b1 } = constants
 
   const emptySwitches = new Array(level)
   const switchTiles = emptySwitches.fill(null).map((s, index) => {
     const switchTile = {
-      x: cols - (1 + index),
-      y: rows,
-      value: switchValue
+      x: c - (1 + index),
+      y: r,
+      value: b1
     }
     return switchTile
   })

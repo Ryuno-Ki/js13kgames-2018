@@ -1,4 +1,4 @@
-import sizes from '../sizes'
+import constants from '../../constants'
 import modem from './modem'
 import path from './path'
 import pc from './pc'
@@ -21,9 +21,9 @@ const getFixedTiles = function () {
 }
 
 const generateMaze = function () {
-  const { rows, cols } = sizes
-  const emptyMaze = new Array(rows * cols)
-  const generatedMaze = emptyMaze.fill(0)
+  const { r, c, u } = constants
+  const emptyMaze = new Array(r * c)
+  const generatedMaze = emptyMaze.fill(u)
   const maze = getFixedTiles()
 
   maze.forEach((entry) => {
@@ -36,10 +36,8 @@ const generateMaze = function () {
   return generatedMaze
 }
 
-
 const maze = function () {
   const generatedMaze = generateMaze()
-  console.log('Generated maze', generatedMaze)
   return generatedMaze
 }
 

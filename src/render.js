@@ -1,3 +1,4 @@
+import constants from './constants'
 import createSwitchesSprite from './sprites/switches'
 import tilesets from './tilesets'
 
@@ -5,7 +6,8 @@ const render = function () {
   const tiles = tilesets()
   tiles.render()
 
-  const switches = createSwitchesSprite(32 * 8, 32 * 9)
+  const { h, w } = constants
+  const switches = createSwitchesSprite(8 * h, 9 * w)
   switches.render()
 }
 

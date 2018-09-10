@@ -1,16 +1,16 @@
-import sizes from '../sizes'
+import constants from '../../constants'
+import store from '../../store'
 
 const servers = function () {
-  const level = 1  // TODO: Read from store
-  const { rows, cols } = sizes
-  const serverValue = 11
+  const level = store.state().level
+  const { r, c, s3 } = constants
 
   const emptyServerTiles = new Array(level)
   const serverTiles = emptyServerTiles.fill(null).map((s, index) => {
     const serverTile = {
       x: 1,
       y: 1 + index,
-      value: serverValue
+      value: s3
     }
     return serverTile
   })

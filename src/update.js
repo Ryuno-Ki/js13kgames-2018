@@ -1,16 +1,14 @@
 /* global kontra */
-import store from './store'
+import constants from './constants'
 
 const update = function (dt) {
-  const loaded = store.state().loaded
-  console.log('Toggling loaded', loaded)
-  store.setState({
-    loaded: !loaded
-  })
   kontra.pointer.onDown((event, object) => {
+    // TODO: Toggle state if clicked on Switch
+    //       Trigger re-render of layer
+    const { a } = constants
     console.log('Clicked on', event, object)
     if (object) {
-      kontra.assets.audio['dial-up-sound'].play()
+      kontra.assets.audio[ a ].play()
     }
   })
 }

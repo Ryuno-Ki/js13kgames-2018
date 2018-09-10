@@ -1,29 +1,29 @@
 /* global kontra */
+import constants from '../constants'
+import store from '../store'
 import maze from './maze'
-import sizes from './sizes'
 
-const ground = function (tileEngine) {
-  const level = 1  // TODO: Read from store
+const init = function (tileEngine) {
+  const level = store.state().level
+  const { g, t } = constants
 
-  tileEngine.addTilesets({
-    image: 'tileset',
-  })
+  tileEngine.addTilesets({ image: t })
   tileEngine.addLayers({
-    name: 'ground',
+    name: g,
     zIndex: level * 10,
     data: maze()
   })
 }
 
 const tilesets = function () {
-  const { rows, cols } = sizes
+  const { h, w, r, c } = constants
   const tileEngine = kontra.tileEngine({
-    tileHeight: 32,
-    tileWidth: 32,
-    height: rows,
-    width: cols
+    tileHeight: h,
+    tileWidth: w,
+    height: r,
+    width: c
   })
-  ground(tileEngine)
+  init(tileEngine)
   return tileEngine
 }
 

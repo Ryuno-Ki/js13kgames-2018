@@ -1,13 +1,13 @@
 /* global kontra */
-const assets = [
-  'tileset.png',
-  'dial-up-sound.mp3'
-]
+import constants from '../constants'
 
 function loadAssets () {
+  const { ae, te } = constants
+
   kontra.assets.imagePath = './'
   kontra.assets.audioPath = './'
-  const loadedAssets = kontra.assets.load(...assets)
+
+  const loadedAssets = kontra.assets.load(ae, te)
   return loadedAssets
 }
 

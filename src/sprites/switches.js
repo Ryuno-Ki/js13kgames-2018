@@ -1,11 +1,14 @@
 /* global kontra */
+import constants from '../constants'
+
 function createSwitchesSprite (x, y) {
+  const { h, w } = constants
   const spriteOptions = {
     x,
     y,
     color: 'transparent',
-    height: 32,
-    width: 32,
+    height: h,
+    width: w,
     type: 'switch'
   }
 
