@@ -1,10 +1,10 @@
-const constants = Object.freeze({
+const constants = {
   // Assets
-  a: 'dial-up', // audio
-  ae: 'dial-up.mp3', // audio with extension
-  g: 'ground', // ground layer
-  t: 'tileset', // tileset
-  te: 'tileset.png', // tileset with extension
+  a: 'd', // audio (dial-up)
+  ae: 'd.mp3', // audio with extension
+  g: 'g', // ground layer
+  t: 't', // tileset
+  te: 't.png', // tileset with extension
 
   // World
   h: 32, // height of a tile
@@ -15,10 +15,12 @@ const constants = Object.freeze({
   u: 0, // unset tile id
   m: 16, // modem
   p: 12, // personal computer
-  b1: 14, // button in neutral position
+  b1: 13, // button in active position
+  b2: 14, // button in neutral position
+  b3: 15, // button in deactive position
   s1: 9, // server with correct position and value
   s2: 10, // server with correct position, but wrong value
   s3: 11 // server with neither correct position nor value
-})
+}
 
 export default constants

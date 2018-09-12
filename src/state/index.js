@@ -1,15 +1,11 @@
 import game from './game'
 import mastermind from './mastermind'
+import updateWithSecret from './updateWithSecret'
 
-// TODO: Hold maze array in state
-// TODO: Hold state of each switch in state
-// TODO: Hold state of each server in state
-// TODO: Hold level in state
-// TODO: Hold played time in ms in state
-const state = {
-  loaded: false,
-  game,
-  mastermind
+let state = {
+  gm: game,
+  mm: mastermind
 }
+state = updateWithSecret(state)
 
 export default state

@@ -10,6 +10,7 @@ const pugOptions = {
   title,
 }
 const minifyOptions = {
+  minifyCSS: true,
   removeAttributeQuotes: true
 }
 

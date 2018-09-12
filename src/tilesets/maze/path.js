@@ -4,9 +4,7 @@ import nextTile from './nextTile'
 
 const step = function (maze, current) {
   const direction = nextDirection(maze, current)
-  console.log('Next direction in path', direction)
   const next = nextTile(maze, current, direction)
-  console.log('Next tile in path', next)
   return next
 }
 

@@ -1,23 +1,22 @@
-/* global kontra */
+/* global k */
 import constants from '../constants'
 import store from '../store'
 import maze from './maze'
 
 const init = function (tileEngine) {
-  const level = store.state().game.l
+  const level = store.state().gm.l
   const { g, t } = constants
 
   tileEngine.addTilesets({ image: t })
   tileEngine.addLayers({
     name: g,
-    zIndex: level * 10,
     data: maze()
   })
 }
 
 const tilesets = function () {
   const { h, w, r, c } = constants
-  const tileEngine = kontra.tileEngine({
+  const tileEngine = k.tileEngine({
     tileHeight: h,
     tileWidth: w,
     height: r,

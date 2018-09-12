@@ -1,5 +1,6 @@
 import constants from './constants'
-import createSwitchesSprite from './sprites/switches'
+import factory from './sprites/factory'
+import store from './store'
 import tilesets from './tilesets'
 
 const render = function () {
@@ -7,8 +8,15 @@ const render = function () {
   tiles.render()
 
   const { h, w } = constants
-  const switches = createSwitchesSprite(8 * h, 9 * w)
-  switches.render()
+  const pc = factory({ x: 9 * h, y: 9 * w, type: 'p' })
+  pc.render()
+
+  const level = store.state().gm.l
+  let switches
+  for (let i = 0; i < level; i++) {
+    switches = factory({ x: (8 - i) * h, y: 9 * w, i })
+    switches.render()
+  }
 }
 
 export default render

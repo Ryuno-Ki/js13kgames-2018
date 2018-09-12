@@ -20,8 +20,7 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with An Offline Life.  If not, see <https://www.gnu.org/licenses/>. 
-`
+along with An Offline Life.  If not, see <https://www.gnu.org/licenses/>.`
 
 export default {
   input: './src/index.js',
@@ -45,13 +44,16 @@ export default {
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
 
-    terser(),
+    terser({
+      ecma: 8
+    }),
 
     copy({
       './src/game.css': './tmp/game.css',
+      './src/alias.js': './tmp/alias.js',
       './src/vendor/kontra.js': './tmp/kontra.js',
-      './src/assets/dial-up.mp3': './dist/dial-up.mp3',
-      './src/assets/tileset.png': './dist/tileset.png'
+      './src/assets/dial-up.mp3': './dist/d.mp3',
+      './src/assets/tileset.png': './dist/t.png'
     }),
 
     license({

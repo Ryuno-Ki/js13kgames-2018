@@ -40,8 +40,8 @@ const generateMaze = function () {
   const state = store.state()
   store.setState({
     ...state,
-    game: {
-      ...state.game,
+    gm: {
+      ...state.gm,
       m: generatedMaze
     }
   })
@@ -49,8 +49,8 @@ const generateMaze = function () {
 }
 
 const maze = function () {
-  const mazeInState = store.state().game.m
-  if (mazeInState) {
+  const mazeInState = store.state().gm.m
+  if (mazeInState.length > 0) {
     return mazeInState
   }
   const generatedMaze = generateMaze()

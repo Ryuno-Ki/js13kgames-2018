@@ -1,4 +1,4 @@
-/* global kontra */
+/* global k */
 import render from './render'
 import update from './update'
 import loadAssets from './sprites'
@@ -10,12 +10,8 @@ const gameLoopOptions = {
 }
 
 loadAssets().then(() => {
-  kontra.init()
+  k.init()
 
-  const loop = kontra.gameLoop(gameLoopOptions)
+  const loop = k.gameLoop(gameLoopOptions)
   loop.start()
-
-  store.setState({ loaded: true })
-}).catch((error) => {
-  console.error('Error on init', error)
-})
+}).catch(() => {})

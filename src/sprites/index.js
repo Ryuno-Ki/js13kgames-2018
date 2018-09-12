@@ -1,13 +1,13 @@
-/* global kontra */
+/* global k */
 import constants from '../constants'
 
 function loadAssets () {
   const { ae, te } = constants
 
-  kontra.assets.imagePath = './'
-  kontra.assets.audioPath = './'
+  k.assets.imagePath = './'
+  k.assets.audioPath = './'
 
-  const loadedAssets = kontra.assets.load(ae, te)
+  const loadedAssets = k.assets.load(ae, te)
   return loadedAssets
 }
 

@@ -1,0 +1,1 @@
+window.k = window.kontra

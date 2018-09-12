@@ -1,6 +1,6 @@
 const game = {
-  l: 1,  // level
-  m: null // maze
+  l: 1, // level
+  m: [] // maze
 }
 
 export default game

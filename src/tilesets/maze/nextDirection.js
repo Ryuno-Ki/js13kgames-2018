@@ -9,10 +9,6 @@ const pickNextDirection = function (possibleDirections, options) {
   const moreData = options || {}
   let index
 
-  if (numberOfDirections === 0) {
-    throw new Error('No directions to choose from!')
-  }
-
   if (numberOfDirections === 1) {
     index = possibleDirections[ 0 ]
   } else {

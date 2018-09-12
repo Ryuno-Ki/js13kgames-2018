@@ -6,19 +6,14 @@ import xyToIndex from './xyToIndex'
 
 const getIndexByDirection = function (pos, direction) {
   let index
-  switch (direction) {
-    case 't':
-      index = xyToIndex(pos.x,     pos.y - 1)
-      break
-    case 'r':
-      index = xyToIndex(pos.x + 1, pos.y)
-      break
-    case 'b':
-      index = xyToIndex(pos.x,     pos.y + 1) 
-      break
-    case 'l':
-      index = xyToIndex(pos.x - 1, pos.y)
-      break
+  if (direction === 't') {
+    index = xyToIndex(pos.x,     pos.y - 1)
+  } else if (direction === 'r') {
+    index = xyToIndex(pos.x + 1, pos.y)
+  } else if (direction === 'b') {
+    index = xyToIndex(pos.x,     pos.y + 1) 
+  } else if (direction === 'l') {
+    index = xyToIndex(pos.x - 1, pos.y)
   }
   return index
 }
@@ -30,10 +25,6 @@ const findNeighbor = function (characteristics) {
 const pickNextTile = function (possibleTiles, maze, index) {
   const numberOfTiles = possibleTiles.length
   let id
-
-  if (numberOfTiles === 0) {
-    throw new Error('No tiles to choose from!')
-  }
 
   if (numberOfTiles === 1) {
     id = findNeighbor(possibleTiles[ 0 ])
