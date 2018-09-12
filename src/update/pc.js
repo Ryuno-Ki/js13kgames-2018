@@ -43,7 +43,7 @@ const levelUp = function (state, gm) {
 }
 
 const win = function () {
-  window.online.className = 'back'
+  window.on.className = 'back'
 }
 
 const pc = function () {

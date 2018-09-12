@@ -3,13 +3,14 @@ html
     head
         meta('charset'='utf-8')
         title= title
+        meta('name'='viewport', 'content'='width=device-width, initial-scale=1')
         style
             include ../tmp/game.css
     body
         div
             canvas#game('height'='288', 'width'='288')
-        p#online You are online!
-        p.offline   You are offline! Find the right combination to get online!
+        p#on  You are online!
+        p.off You are offline! Find the combo to get online!
         script
             include ../tmp/kontra.js
         script

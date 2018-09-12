@@ -6,27 +6,26 @@ body {
   height: 100vh;
   width: 100vw;
   margin: 0;
-  background-color: silver;
+  background-color: #eee;
 }
 
 #game {
-  background-color: #eeeeee;
+  background-color: #eee;
   cursor: pointer;
 }
 
 p {
-  margin-inline-start: 2%;
-  margin-inline-end: 2%;
+  margin: 0 2%;
 }
 
-#online {
+#on {
     display: none;
 }
 
-#online.back {
+#on.back {
     display: block;
 }
 
-#online.back + .offline {
+#on.back + .off {
     display: none;
 }
