@@ -8,10 +8,13 @@ const servers = function (state, response) {
   const values = []
   for (let g = 0; g < correctPosition; g++) { values.push(true) }
   for (let r = 0; r < correctNumber; r++) { values.push(false) }
-  const len = values.length
+  let len = values.length
   for (let b = len; b < l; b++) { values.push(undefined) }
 
-  for (let i = 0; i < values.length; i++) {
+  values.sort()
+  values.reverse()
+  len = values.length
+  for (let i = 0; i < len; i++) {
     const value = values.pop()
     const sIndex = serverIndex(i)
     state.gm[ sIndex ] = value
