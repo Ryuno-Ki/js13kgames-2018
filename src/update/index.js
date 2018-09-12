@@ -4,7 +4,7 @@ import switches from './switches'
 
 const update = function () {
   k.pointer.onDown((event, object) => {
-    if (object) {
+    if (event.type === 'mousedown' && object) {
       const { type } = object
       if (type === 'p') { pc() } else { switches(object) }
     }

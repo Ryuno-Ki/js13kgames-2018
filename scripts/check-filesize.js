@@ -4,7 +4,7 @@ const zip = require('zip-dir')
 
 const MAX_BYTES = 13312
 const distFolder = path.join(__dirname, '..', 'dist')
-const filename = path.join(__dirname, '..', 'dist.zip')
+const filename = path.join(__dirname, '..', 'an-offline-life.zip')
 
 function zipDirectory (directory, targetFile, callback) {
   zip(distFolder, { saveTo: targetFile }, (error) => {

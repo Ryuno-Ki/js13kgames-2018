@@ -43,6 +43,7 @@ const levelUp = function (state, gm) {
 }
 
 const win = function () {
+  window.online.className = 'back'
 }
 
 const pc = function () {
@@ -60,7 +61,15 @@ const pc = function () {
 
   const { correctPosition } = response
   if (correctPosition === l) {
-    if (l === 8) {
+    if (l === 7) {
+      store.setState({
+        ...state,
+        gm: {
+          ...gm,
+          m: gm.m.map(() => 0)
+        }
+      })
+
       win()
     } else {
       levelUp(state, gm)

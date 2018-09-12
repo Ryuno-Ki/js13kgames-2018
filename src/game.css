@@ -18,3 +18,15 @@ p {
   margin-inline-start: 2%;
   margin-inline-end: 2%;
 }
+
+#online {
+    display: none;
+}
+
+#online.back {
+    display: block;
+}
+
+#online.back + .offline {
+    display: none;
+}
