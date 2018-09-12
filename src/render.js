@@ -8,13 +8,13 @@ const render = function () {
   tiles.render()
 
   const { h, w } = constants
-  const pc = factory({ x: 9 * h, y: 9 * w, type: 'p' })
+  const pc = factory({ x: 8 * h, y: 8 * w, type: 'p' })
   pc.render()
 
   const level = store.state().gm.l
   let switches
   for (let i = 0; i < level; i++) {
-    switches = factory({ x: (8 - i) * h, y: 9 * w, i })
+    switches = factory({ x: (7 - i) * h, y: 8 * w, i })
     switches.render()
   }
 }

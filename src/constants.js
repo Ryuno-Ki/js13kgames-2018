@@ -9,12 +9,12 @@ const constants = {
   // World
   h: 32, // height of a tile
   w: 32, // width of a tile
-  r: 10, // tiles in a row
-  c: 10, // riles in a column
+  r: 9, // tiles in a row
+  c: 9, // riles in a column
 
   u: 0, // unset tile id
-  m: 16, // modem
-  p: 12, // personal computer
+  m: 16, // modem id
+  p: 12, // personal computer id
   b1: 13, // button in active position
   b2: 14, // button in neutral position
   b3: 15, // button in deactive position

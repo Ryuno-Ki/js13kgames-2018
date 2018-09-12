@@ -42,10 +42,14 @@ const levelUp = function (state, gm) {
   store.setState(newState)
 }
 
+const win = function () {
+}
+
 const pc = function () {
   const state = store.state()
   const { a } = constants
   const { gm, mm } = state
+  const { l } = gm
 
   const g = new Game(mm)
   const guess = getGuessFromState(gm)
@@ -55,7 +59,13 @@ const pc = function () {
   if (canGuess(response)) { k.assets.audio[ a ].play() }
 
   const { correctPosition } = response
-  if (correctPosition === gm.l) { levelUp(state, gm) }
+  if (correctPosition === l) {
+    if (l === 8) {
+      win()
+    } else {
+      levelUp(state, gm)
+    }
+  }
 }
 
 export default pc

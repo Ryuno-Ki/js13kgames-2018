@@ -1,6 +1,6 @@
 body {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -12,4 +12,9 @@ body {
 #game {
   background-color: #eeeeee;
   cursor: pointer;
+}
+
+p {
+  margin-inline-start: 2%;
+  margin-inline-end: 2%;
 }
