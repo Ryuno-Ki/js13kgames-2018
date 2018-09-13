@@ -2,6 +2,23 @@ import store from '../../../store'
 import get from './get'
 import switchIndex from './switchIndex'
 
+/**
+ * Get a list of switch tiles with the correct ID.
+ *
+ * @module tilesets/maze/switches
+ * @exports switches
+ * @requires module:store
+ * @requires module:tilesets/maze/switches/get
+ * @requires module:tilesets/maze/switches/switchIndex
+ */
+
+/**
+ * Look up the application state to compute the correct visual.
+ *
+ * @public
+ * @function
+ * @returns { Array<object> } switchTiles -  List of switch tiles.
+ */
 const switches = function () {
   const gameState = store.state().gm
   const { l } = gameState

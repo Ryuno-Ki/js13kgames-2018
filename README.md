@@ -30,6 +30,11 @@ It makes use of the following works:
 * [Rollup][rollup] - without it I wouldn't have been able to piece together everything.
 * [Terser][terser] by [Fábio Santos][terser-creator] - it optimises the heck out of your code!
 
+## Documentation
+
+After cloning the repo and installing the deps, run `npm run doc` and look
+into the new `docs` directory.
+
 ## Known Issues
 
 If you are starting this app with a file: protocol under a Chromium-based

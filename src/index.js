@@ -8,6 +8,13 @@ const gameLoopOptions = {
   update
 }
 
+/**
+ * Starts the game.
+ *
+ * @requires module:render
+ * @requires module:update
+ * @requires module:loadAssets
+ */
 loadAssets().then(() => {
   k.init()
 

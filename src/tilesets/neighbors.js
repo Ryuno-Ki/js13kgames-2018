@@ -1,5 +1,14 @@
 // TODO: Think about using bitwise operations:
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators
+
+/**
+ * Lists the allowed connections of a tile.
+ * Each object has an ID (matching the tile logic of kontra) and booleans for
+ * Allowed connection to top / right / bottom / left.
+ *
+ * @namespace
+ * @type Array<object>
+ */
 const neighbors = [{
   id: 1,
   t: false,

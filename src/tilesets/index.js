@@ -3,6 +3,23 @@ import constants from '../constants'
 import store from '../store'
 import maze from './maze'
 
+/**
+ * Invokes kontra's tileEngine.
+ *
+ * @module tilesets
+ * @exports tilesets
+ * @requires constants
+ * @requires module:store
+ * @requires module:tilesets/maze
+ */
+
+/**
+ * Initialises the tileEngine by adding a tileset and layer.
+ *
+ * @private
+ * @function
+ * @arg { kontra.tileEngine } tileEngine - A tileEngine object of kontra.
+ */
 const init = function (tileEngine) {
   const level = store.state().gm.l
   const { g, t } = constants
@@ -14,6 +31,12 @@ const init = function (tileEngine) {
   })
 }
 
+/**
+ * Creates a tileEngine and initialises it.
+ *
+ * @public
+ * @function
+ */
 const tilesets = function () {
   const { h, w, r, c } = constants
   const tileEngine = k.tileEngine({

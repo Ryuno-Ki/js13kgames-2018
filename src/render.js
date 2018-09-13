@@ -3,6 +3,24 @@ import factory from './sprites/factory'
 import store from './store'
 import tilesets from './tilesets'
 
+/**
+ * Renders the game every frame.
+ *
+ * @module render
+ * @exports render
+ * @requires constants
+ * @requires module:sprites/factory
+ * @requires module:store
+ * @requires module:tilesets
+ */
+
+/**
+ * Delegates the rendering to specialised methods.
+ * Creates some transparent sprites for click handling.
+ * 
+ * @public
+ * @function
+ */
 const render = function () {
   const { gm } = store.state()
   const tiles = tilesets()
